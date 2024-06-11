@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush-Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+    transition: .5s;
+    scroll-behavior: smooth;
+}
+body{
+    background: #000000;
+    height: 200vh;
+    overflow-x: hidden;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(61, 61, 61);
+}
+.head1{
+    background-image: url("Ayush_logo.png");
+    height: 11vh;
+    width: 10vw;
+    background-size: contain;
+    position: absolute;
+    top: 0%;
+    left: 4%;
+}
+.headicons{
+    height: 6vh;
+    width: 25vw;
+    position: absolute;
+    left: 18%;
+    top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#social_handles{
+    height: 4vh;
+    width: 4vw;
+    color: rgb(255, 255, 255);
+    opacity: .5;
+    transition: .1s ease-in;
+}
+#social_handles:hover{
+    opacity: 1;
+    color: rgb(63, 188, 255);;
+    height: 5vh;
+    width: 5vw;
+    cursor: pointer;
+}
+.phone{
+    height: 6vh;
+    width: 15vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid grey;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 32%;
+    top: 4%;
+    font-weight: bolder;
+    text-decoration: underline;
+    z-index: -1;
+}
+.phonemove{
+    top: 10%;
+}
+.phonehide{
+    top: 4%;
+}
+.phoneborder{
+    border: 4px solid rgb(0, 255, 0);
+}
+.photo{
+    height: 50vh;
+    width: 50vh;
+    background-color: #000000;
+    position: absolute;
+    right: 20%;
+    top: 22%;
+    border-radius: 50%;
+    box-shadow: 0 0 8rem rgb(255, 255, 255);
+}
+#copy{
+    height: 2vh;
+    width: 2vw;
+}
+#copy:hover{
+    cursor: pointer;
+}
+.cancel{
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.cancel:hover{
+    cursor: pointer;
+}
+.menus{
+    width: 50vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    font-family: "poppins", sans-serif;
+    right: 5%;
+    top: 2.5%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#menu{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#menu:hover{
+    color: goldenrod;
+    cursor: pointer;
+}
+#menu:active{
+    color: rgb(116, 1, 170);
+}
+.intro1{
+    color: white;
+    font-family: "exo 2", sans-serif;
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    font-size: 1.8rem;
+}
+.intro2{
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: yellow;
+}
+.intro3{
+    font-size: 1.9rem;
+}
+.intro4 {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(0, 166, 255);
+    overflow: hidden;
+    text-decoration: underline;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end) infinite;
+  }
+  .intro4::before{
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(87, 194, 251);
+    animation: typing-cursor 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes typing-cursor {
+    from {
+      width: 5px;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+.dlresume{
+    height: 5vh;
+    width: 8vw;
+    background-color: rgb(87, 194, 251);
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    border-radius: 18px;
+    font-weight: bold;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: .7%;
+}
+.dlresume:hover{
+    cursor: pointer;
+    background-color: rgb(0, 166, 255);
+}
+.dlresume:active{
+    background-color: rgb(133, 212, 255);
+    font-size: .8rem;
+}
+.download{
+    height: 4vh;
+    width: 4vw;
+    position: relative;
+    left: 3%;
+}
+.logo1{
+    background-image: url("ai.png");
+    background-size: cover;
+    height: 5vh;
+    width: 2.5vw;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: white;
+}
+.logo2{
+    background-image: url("algorithm.png");
+    background-size: cover;
+    height: 5vh;
+    width: 2.5vw;
+    position: absolute;
+    top: 60%;
+    left: 14%;
+    color: white;
+}
+.logo3{
+    background-image: url("website-codes.png");
+    background-size: cover;
+    height: 5vh;
+    width: 2.5vw;
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    color: white;
+}
+#menu {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #menu::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #menu:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .about{
+    position: absolute;
+    font-size: 3rem;
+    top: 90%;
+    left: 45%;
+    color: white;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .about_info{
+    height: 40vh;
+    width: 70vw;
+    position: absolute;
+    border: blue 5px solid;
+    border-radius: 20px;
+    top: 103%;
+    font-size: 1.3rem;
+    left: 5%;
+    color: white;
+  }
+
+  .hi{
+    position: absolute;
+    font-size: 3.1rem;
+    margin: 10px;
+    left: 30px;
+    color: rgb(0, 166, 255);
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+  }
+  .status{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: yellow;
+  }
+  .aboutinfo{
+    position: absolute;
+    top: 33%;
+    left: 15px;
+    font-family: "Exo 2", sans-serif;
+    line-height: 30px;
+  }
+  .pingMe{
+    position: absolute;
+    bottom: 5%;
+    font-family: "poppins", sans-serif;
+    left: 15px;
+    font-weight: bold;
+    color: rgb(177, 177, 255);
+  }
+  .details{
+    height: 40vh;
+    width: 17vw;
+    position: absolute;
+    border: rgb(177, 177, 255) 5px solid;
+    border-radius: 20px;
+    top: 103%;
+    font-size: 1.3rem;
+    right: 5%;
+    color: white;
+  }
+  .number{
+    position: absolute;
+    top: 10%;
+    font-size: .9rem;
+    font-family: "exo 2", sans-serif;
+  }
+  .MAIL{
+    position: absolute;
+    top:40%;
+    font-size: .9rem;
+    font-family: "exo 2", sans-serif;
+  }
+  .Add{
+    position: absolute;
+    top: 70%;
+    font-size: .9rem;
+    font-family: "exo 2", sans-serif;
+  } 
+
+  .SKILLS{
+    position: relative;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+
+    font-size: 3rem;
+    top: 70%;
+    left: 43%;
+    color: white;
+  }
+  .skill_info{
+    position: absolute;
+    height: 48vh;
+    width: 80vw;
+    border: 5px solid rgb(26, 255, 202);
+    border-radius: 20px;
+    top: 165%;
+    left: 10%;
+  }
+  .html{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 9.5%;
+    left: 3%;
+  }
+  .proContain1{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 12%;
+    margin-top: 3%;
+  }
+  .proBar1{
+    height: 100%;
+    border-right: 5px solid white;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-radius: 20px;
+    background-color: rgb(204, 255, 128);
+  }
+  .css{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 27%;
+    left: 3%;
+  }
+  .proContain2{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 12%;
+    margin-top: 8%;
+  }
+  .proBar2{
+    height: 100%;
+    border-right: 5px solid white;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-radius: 20px;
+    background-color: rgb(204, 255, 128);
+  }
+  .js{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 45.5%;
+    left: 1%;
+  }
+  .proContain3{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 12%;
+    margin-top: 13%;
+  }
+  .proBar3{
+    height: 100%;
+    border-right: 5px solid white;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-radius: 20px;
+    background-color: rgb(204, 255, 128);
+  }
+  .php{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 63%;
+    left: 3%;
+  }
+  .proContain4{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 12%;
+    margin-top: 18%;
+  }
+  .proBar4{
+    height: 100%;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-right: 5px solid white;
+    border-radius: 20px;
+    background-color: rgb(204, 255, 128);
+  }
+  .db{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 81%;
+    left: 2%;
+  }
+  .proContain5{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 12%;
+    margin-top: 23%;
+  }
+  .proBar5{
+    height: 100%;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-radius: 20px;
+    border-right: 5px solid white;
+    background-color: rgb(204, 255, 128);
+  }
+  .python{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 11%;
+    left: 40.5%;
+}
+.proContain6{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 40%;
+    margin-top: 5.5%;
+}
+.proBar6{
+    height: 100%;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-right: 5px solid white;
+    border-radius: 20px;
+    background-color: rgb(204, 255, 128);
+}
+.java{
+  font-family: "EXo 2", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 29%;
+  left: 40.5%;
+}
+  .proContain7{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 40%;
+    margin-top:10.5%;
+  }
+  .proBar7{
+    height: 100%;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    border-radius: 20px;
+    border-right: 5px solid white;
+    background-color: rgb(204, 255, 128);
+  }
+  .c{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 47%;
+    left: 40.5%;
+  }
+  .proContain8{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 40%;
+    margin-top:15.5%;
+  }
+  .proBar8{
+    border-right: 5px solid white;
+    height: 100%;
+    border-radius: 20px;
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    background-color: rgb(204, 255, 128);
+  }
+  .Ai{
+    font-family: "EXo 2", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 65%;
+    left: 40.5%;
+  }
+  .proContain9{
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 20px;
+    background-color: grey;
+    position: absolute;
+    left: 40%;
+    margin-top:20.5%;
+  }
+  .proBar9{
+    width: 0%;
+    transition: width 800ms ease-in-out;
+    height: 100%;
+    border-radius: 20px;
+    border-right: 5px solid white;
+    background-color: rgb(204, 255, 128);
+  }
+  .circular-progress-bar1 {
+    width: 120px;
+    height: 120px;
+    right: 18%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .circular-progress-bar__circle1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#be78ff 0%, #ddd 0%);
+    transition: background 1s;
+  }
+  .comm{
+    position: absolute;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    right: 18%;
+    top: 41%;
+  }
+  .circular-progress-bar2 {
+    width: 120px;
+    right: 5%;
+    top: 5%;
+    height: 120px;
+    position: absolute;
+  }
+
+  .circular-progress-bar__circle2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0%, #ddd 0%);
+    transition: background 1s;
+  }
+  .create{
+    position: absolute;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    right: 7%;
+    top: 41%;
+  }
+  .circular-progress-bar3 {
+    width: 120px;
+    right: 18%;
+    top: 53%;
+    height: 120px;
+    position: absolute;
+  }
+
+  .circular-progress-bar__circle3 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0%, #ddd 0%);
+    transition: background 1s;
+  }
+  .multi{
+    position: absolute;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    right: 18.5%;
+    top: 90%;
+  }
+  .circular-progress-bar4 {
+    width: 120px;
+    right: 5%;
+    top: 53%;
+    height: 120px;
+    position: absolute;
+  }
+
+  .circular-progress-bar__circle4 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0%, #ddd 0%);
+    transition: background 1s;
+  }
+  .ps{
+    position: absolute;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    right: 4.54%;
+    top: 90%;
+  }
+
+  .projects{
+    position: absolute;
+    font-size: 3rem;
+    top: 225%;
+    left: 40%;
+    color: white;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+  }
+  .project_info{
+    position: absolute;
+    border: 5px solid yellow;
+    height: 60vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 85vw;
+    top: 240%;
+    left: 7%;
+  }
+  .row1{
+    display: flex;
+    position: absolute;
+    gap: 80px;
+    justify-content: space-evenly;
+    top: 10%;
+  }
+  .htmlcss{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .htmlcssjs1{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .phpdb{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .Java{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .row2{
+    display: flex;
+    flex: 1;
+    gap: 80px;
+    position: absolute;
+    bottom: 10%;
+    justify-content: space-evenly;
+  }
+  .Python{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .dbsql{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .cc{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+  .AI{
+    position: relative;
+    height: 20vh;
+    width: 15vw;
+    background-color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  footer{
+    height: 70vh;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    position: relative;
+    bottom: -300vh;
+    /* font-family: "exo 2", sans-serif; */
+  }
+  .contacthead{
+    height: 6vh;
+    width: 10vw;
+    background-color: gold;
+    border-radius: 20px;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.contacthead:hover{
+      box-shadow: 0 0 1.5rem rgb(255, 215, 0);
+  }
+  .cont{
+    position: absolute;
+    left: 42.5%;
+    color: white;
+    top: 20%;
+  }
+  .contholders{
+    height: 20vh;
+    width: 90vw;
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #same{
+    height: 12vh;
+    width: 12vh;
+    background-color: gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#same:hover{
+    box-shadow: 0 0 1rem rgb(221, 255, 0);
+    cursor: pointer;
+    color: white;
+}
+.add1{
+    position: absolute;
+    top: 54%;
+    left: 11%;
+    color: white;
+}
+ion-icon[name = "send-outline"]{
+    height: 4vh;
+    width: 4vw;
+    transform: rotate(-31deg);
+}
+.num1{
+    position: absolute;
+    top: 54%;
+    left: 34.5%;
+    color: white;
+}
+ion-icon[name = "call-outline"]{
+    height: 4vh;
+    width: 4vw;
+}
+.email1{
+    position: absolute;
+    top: 54%;
+    left: 56%;
+    color: white;
+}
+ion-icon[name = "mail-outline"]{
+    height: 4vh;
+    width: 4vw;
+}
+.res1{
+    position: absolute;
+    top: 54%;
+    right: 12%;
+    color: white;
+}
+ion-icon[name = "cloud-download-outline"]{
+    height: 4vh;
+    width: 4vw;
+}
+.quest{
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    left: 32%;
+    bottom: 27%;
+}
+.click{
+    height: 6vh;
+    width: 10vw;
+    background-color: gold;
+    position: absolute;
+    bottom: 28%;
+    right: 34%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.click:hover{
+    box-shadow: 0 0 1rem rgb(255, 215, 0);
+    cursor: pointer;
+}
+.click:active{
+    font-size: 1rem;
+}
+.findme{
+    position: absolute;
+    bottom: 14%;
+    color: white;
+    left: 43%;
+}
+.handlelogo{
+    height: 5vh;
+    width: 12vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 48%;
+    bottom: 12%;
+}
+ion-icon[name="logo-linkedin"],
+ion-icon[name="logo-instagram"],
+ion-icon[name="logo-twitter"],
+ion-icon[name="logo-facebook"]{
+    height: 3vh;
+    width: 1.5vw;
+    color: white;
+}
+ion-icon[name="logo-linkedin"]:hover,
+ion-icon[name="logo-instagram"]:hover,
+ion-icon[name="logo-twitter"]:hover,
+ion-icon[name="logo-facebook"]:hover{
+    color: yellow;
+    height: 4vh;
+    width: 2vw;
+    cursor: pointer;
+}
+ion-icon[name="send-outline"]:active,
+ion-icon[name="call-outline"]:active,
+ion-icon[name="mail-outline"]:active,
+ion-icon[name="cloud-download-outline"]:active{
+    height: 2vh;
+    width: 1vw;
+}
+.border{
+    width: 80vw;
+    height: .5vh;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 10%;
+    top: 28%;
+    box-shadow: 1px 1px .5rem rgb(255, 255, 255);
+}
+.copyright{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 40vw;
+    left: 33%;
+}
+</style>
+<body>
+    <div class="navbar">
+        <div class="head1">
+
+        </div>
+            <div class="headicons">
+                <a target="_blank" href="https://www.instagram.com/_ayush__vrma_/"><ion-icon class="insta" id="social_handles" name="logo-instagram"></ion-icon></a>
+                <ion-icon id="social_handles" name="logo-linkedin"></ion-icon>
+                <a target="_blank" href="https://github.com/Ayush2426"><ion-icon id="social_handles" name="logo-github"></ion-icon></a>
+                <ion-icon class="call" id="social_handles" name="call-outline"></ion-icon>
+            </div>
+            <div class="phone">+91 9142315603<ion-icon id="copy" name="copy-outline"></ion-icon>
+                <ion-icon class="cancel" name="add-outline"></ion-icon></div>
+        
+        <div class="menus">
+            <p id="menu" href="" onclick="home()">Home</p>
+            <a href="#aboutsexn"><p id="menu" href="">About</p></a>
+            <a href="#skillsexn"><p id="menu" href="">Skills</p></a>
+            <a href="#projects"><p id="menu" href="">Projects</p></a>
+            <a href="#contactsexn"><p id="menu" href="">Contact</p></a>
+        </div>
+    </div>
+    <p class="intro1">Hello, Im <br> 
+        <span class="intro2">Ayush Verma</span>!<br>
+        <span class="intro3">My interests are in</span><br>
+        <span class="intro4"></span>
+    </p>
+
+    <div class="photo"></div>
+
+    <div class="dlresume"><ion-icon class="download" name="code-download"></ion-icon>Resume</div>
+    <div class="logo1"></div>
+    <div class="logo2"></div>
+    <div class="logo3"></div>
+
+    <p class="about" id="aboutsexn">About</p>
+    <div class="about_info">
+        <span class="hi">Hi, Im Ayush Verma<span class="status"> : WEB DEVELOPER</span></span>
+        <span class="aboutinfo"> Im 19 Y.o. and I've pursued BCA from ARYABHATT KNOWLDEGE UNIVERSITY(Patna) along with that Im a Freelancer too. 
+            Currently I holds the skillset of Frontend and partial Backend Web Development along with<br>that I have a hold in DSA too and im planning
+             to be working on AI implementation as well.<br><h3>Find much about me in further section ahead!</h3></span>
+             <span class="pingMe">Feel free to ping me if you find myself useful for you!</span>
+    </div>
+    <div class="details">
+        <span class="number"><ion-icon name="call-outline"></ion-icon>+91 9142315603</span>
+        <span class="MAIL"><ion-icon name="mail-outline"></ion-icon> av874559@gmail.com</span>
+        <span class="Add"><ion-icon name="send-outline"></ion-icon>Jamshedpur, Jharkhand</span>
+    </div>
+
+    <p class="SKILLS" >SKILLS</p>
+    <div class="skill_info" id="skillsexn">
+        <span class="html">HTML</span>
+        <div name = "HTML" class="proContain1">
+            <div class="proBar1"></div>
+        </div>
+        <span class="css">CSS</span>
+        <div class="proContain2">
+            <div class="proBar2"></div>
+        </div>
+        <span class="js">JAVASCRIPT</span>
+        <div class="proContain3">
+            <div class="proBar3"></div>
+        </div>
+        <span class="php">PHP</span>
+        <div class="proContain4">
+            <div class="proBar4"></div>
+        </div>
+        <span class="db">MONGODB/<br>MySQL</span>
+        <div class="proContain5">
+            <div class="proBar5"></div>
+        </div>
+        <span class="python">PYTHON</span>
+        <div class="proContain6">
+            <div class="proBar6"></div>
+        </div>
+        <span class="java">JAVA</span>
+        <div class="proContain7">
+            <div class="proBar7"></div>
+        </div>
+        <span class="c">C/C++</span>
+        <div class="proContain8">
+            <div class="proBar8"></div>
+        </div>
+        <span class="Ai">Artificial Intellegence</span>
+        <div class="proContain9">
+            <div class="proBar9"></div>
+        </div>
+        
+        
+        <div class="circular-progress-bar1">
+        <div class="circular-progress-bar__circle1" id="progressCircle1"></div>
+      </div>
+      <span class="comm">Communication</span>
+      <div class="circular-progress-bar2">
+        <div class="circular-progress-bar__circle2" id="progressCircle2"></div>
+      </div>
+      <span class="create">Creativity</span>
+      <div class="circular-progress-bar3">
+        <div class="circular-progress-bar__circle3" id="progressCircle3"></div>
+      </div>
+      <span class="multi">Multi-Tasking</span>
+      <div class="circular-progress-bar4">
+        <div class="circular-progress-bar__circle4" id="progressCircle4"></div>
+      </div>
+      <span class="ps">Problem Solving</span>
+
+      
+    </div>
+
+    <p class="projects" id="projects">PROJECTS</p>
+    <div class="project_info">
+        <div class="row1">
+            <div class="htmlcss"></div>
+            <div class="htmlcssjs1"></div>
+            <div class="phpdb"></div>
+            <div class="Java"></div>
+        </div>
+        <div class="row2">
+            <div class="Python"></div>
+            <div class="dbsql"></div>
+            <div class="cc"></div>
+            <div class="AI"></div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer class="footer" id="contactsexn">
+        <div class="contacthead">Contact Me
+        </div>
+        <span class="cont">Below are the details to ping📎 me!</span>
+
+        <div class="border"></div>
+
+        <div class="contholders">
+            <div id="same" class="add"><ion-icon name="send-outline"></ion-icon></div>
+            <div id="same" class="num"><ion-icon name="call-outline"></ion-icon></div>
+            <div id="same" class="email"><ion-icon name="mail-outline"></ion-icon></div>
+            <div id="same" class="res"><ion-icon name="cloud-download-outline"></ion-icon></div>
+        </div>
+        <span class="add1">Jamshedpur, Jharkhand</span>
+        <span class="num1">+91 9142315603</span>
+        <span class="email1">av874559@gmail.com</span>
+        <span class="res1">Resume Download</span>
+
+        <span class="quest">Have a Question.?</span>
+        <div class="click">Click Here!</div>
+
+        <span class="findme">Find me on :</span>
+        <div class="handlelogo">
+            <div class="logos"> <ion-icon name="logo-linkedin"></ion-icon></div>
+            <div class="logos"><ion-icon name="logo-instagram"></ion-icon></div>
+            <div class="logos"><ion-icon name="logo-twitter"></ion-icon></div>
+            <div class="logos"><ion-icon name="logo-facebook"></ion-icon></div>
+            
+        </div>
+        <p class="copyright">Copyright ©2024 | All rights reserved | This portfolio belongs to Ayush Verma</p>
+    </footer>
+</body>
+<script src="index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circular Progress Bar Example</title>
+  <style>
+    .circular-progress-bar {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .circular-progress-bar__circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: conic-gradient(#4CAF50 0%, #ddd 0%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      transition: background 1s; /* Add transition property */
+    }
+  </style>
+</head>
+<body>
+  <div class="circular-progress-bar">
+    <div class="circular-progress-bar__circle" id="progressCircle">0%</div>
+  </div>
+
+  <script>
+    const progressCircle = document.getElementById('progressCircle');
+
+    function updateCircularProgressBar(percentage) {
+      progressCircle.style.background = `conic-gradient(#4CAF50 ${percentage * 3.6}deg, #ddd ${percentage * 3.6}deg)`;
+      progressCircle.textContent = `${percentage}%`;
+    }
+
+    function transitionToTargetPercentage(targetPercentage) {
+      let currentPercentage = 0;
+      const increment = 1;
+      const interval = setInterval(() => {
+        currentPercentage += increment;
+        updateCircularProgressBar(currentPercentage);
+        if (currentPercentage >= targetPercentage) {
+          clearInterval(interval);
+        }
+      }, 10);
+    }
+    transitionToTargetPercentage(75);
+  </script>
+</body>
+</html>
